@@ -62,10 +62,10 @@
 				Your browser does not support the video tag.
 			</video>
 			<br><br>
-							<h2> DHT - Distribted Hash Table </h2>
+							<h2> DHT - Distributed Hash Table </h2>
 			<p>
 				&emsp;This program uses a DHT to be able to find peers and files in log(n) time with high probability. 
-				<a href="https://pub.tik.ee.ethz.ch/students/2006-So/SA-2006-19.pdf">This</a> paper was used as a reference while building the DHT from scrach. A noteable difference is that PAFT uses TCP while the paper describes using UDP, this creates less communication problems that need to be solved at the expence of speed.
+				<a href="https://pub.tik.ee.ethz.ch/students/2006-So/SA-2006-19.pdf">This</a> paper was used as a reference while building the DHT from scratch. A notable difference is that PAFT uses TCP while the paper describes using UDP, this creates less communication problems that need to be solved at the expense of speed.
 			</p>
 			<h2 style="font-size:40px;"> Lifecycle of a File </h2>
 			<h3> Connecting to the Network </h3>
@@ -74,7 +74,7 @@
 			</p>
 
 			<h3> Uploading a file </h3>
-			<p> &emsp;To upload a file you first have to make a metadata file. This seperates the file into chunks and contains
+			<p> &emsp;To upload a file you first have to make a metadata file. This separates the file into chunks and contains
 				information such as how many chunks are in the file, the checksum of those chunks, the file ID and filename. After being created a string is given that contains the checksum and the ID of the file for others to find the file and download it.
 				Once the metadata file is made then you find the closest 3 peers in the network to that file ID and ask them to store 
 				the File ID and your IP/Port. 
@@ -86,7 +86,7 @@
 
 			<h3> Downloading a file using Onion Routing(Beta) </h3>
 			<p> 
-				&emsp;The only difference between using onion routing and a normal download is that you run your request through multiple peers so that the uploader does not know who is downloading the file.  Those peers forward the requst to the next peer and gives the responce back.  This gives the downloader anonimity but requires 3x the data to be transfered.
+				&emsp;The only difference between using onion routing and a normal download is that you run your request through multiple peers so that the uploader does not know who is downloading the file.  Those peers forward the request to the next peer and give the response back.  This gives the downloader anonymity but requires 3x the data to be transfered.
 			</p>
 							</article>
 			
